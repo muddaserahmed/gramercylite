@@ -1,0 +1,19 @@
+<section>
+  <div class="page-header">
+    <h1>Coupons</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="coupon in vm.coupons" ui-sref="coupons.view({ couponId: coupon.id })" class="list-group-item">
+      <h4 class="list-group-item-heading" ng-bind="coupon.id"></h4>
+      <span><b>Duration</b></span>
+      <span ng-bind="vm.coupon.duration_in_months"></span><span> months ( </span> 
+      <span ng-bind="vm.coupon.duration"></span><span> )</span>
+      <br>
+      <span><b>Off Percentage</b></span>
+      <span ng-bind="vm.coupon.percent_off"></span><span>%</span> 
+      <br>
+      <span><b>Reddemed</b></span>
+      <span ng-bind="vm.coupon.times_redeemed"></span> times 
+    </a>
+  </div>
+</section>

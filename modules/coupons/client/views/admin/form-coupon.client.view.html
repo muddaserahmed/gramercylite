@@ -1,0 +1,46 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.coupon._id ? 'Edit Coupon' : 'New Coupon'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.coupon._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.couponForm" class="form-horizontal" ng-submit="vm.save(vm.form.couponForm.$valid)" novalidate>
+      <fieldset>
+        <!-- <div class="form-group" show-errors>
+          <label class="control-label" for="title">ID</label>
+          <input name="title" type="text" ng-model="vm.coupon.title" id="title" class="form-control" placeholder="ID" required autofocus>
+          <div ng-messages="vm.form.couponForm.id.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Coupon id is required.</p>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <label class="control-label" for="percent_off">Off Percentage</label>
+          <input name="content" type="number" max="100" min="1" data-ng-model="vm.coupon.percent_off" id="content" class="form-control" placeholder="Percentage"></input>
+          <div ng-messages="vm.form.couponForm.id.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Off percentage is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">Duration in months</label>
+          <input type="number" min="1" name="duration_in_months" data-ng-model="vm.coupon.duration_in_months" id="duration_in_months" class="form-control" placeholder="Duration in Months"></input>
+          <div ng-messages="vm.form.couponForm.duration_in_months.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Duration in months is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="duration">Type</label>
+          <select name="duration" data-ng-model="vm.coupon.duration" id="duration" class="form-control" placeholder="Duration in Months">
+            <option selected value="repeating">Repeating</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">Create</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

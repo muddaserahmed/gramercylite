@@ -1,0 +1,33 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Coupons
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.coupons.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="list-group">
+    <div data-ng-repeat="coupon in vm.coupons">
+      <a data-ui-sref="coupons.view({couponId: coupon.id})" class="list-group-item">
+        <h4 class="list-group-item-heading" ng-bind="coupon.id"></h4>
+        <span><b>Duration</b></span>
+        <span ng-bind="coupon.duration_in_months"></span><span> months ( </span> 
+        <span ng-bind="coupon.duration"></span><span> )</span>
+        <br>
+        <span><b>Off Percentage</b></span>
+        <span ng-bind="coupon.percent_off"></span><span>%</span> 
+        <br>
+        <span><b>Reddemed</b></span>
+        <span ng-bind="coupon.times_redeemed"></span> times 
+      </a>
+      <a class="btn btn-primary" ng-click="vm.remove(coupon.id, $index)">
+        <i class="glyphicon glyphicon-trash"></i>
+      </a>
+    </div>
+    <br>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="coupons.$resolved && !coupons.length">
+    No coupons yet, why don't you <a data-ui-sref="admin.coupons.create">create one</a>?
+  </div>
+</section>
