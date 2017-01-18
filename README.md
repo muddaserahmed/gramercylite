@@ -1,6 +1,6 @@
 [![gramercy.io Logo](http://gramercy.io/img/stripe-gramercy-logo.svg)](http://gramercy.io/)
 
-gramercy-lite is a full-stack JavaScript open-source solution, which provides a solid starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. The idea is to solve the common issues with connecting those frameworks, build a robust framework to support daily development needs, and help developers use better practices while working with popular JavaScript components.
+gramercy-lite is a full-stack JavaScript open-source application, that is built upon [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/). The app is developed as a demo for the test assignment. It is the extremly basic version of gramercy.io created in approximately one day.
 
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
